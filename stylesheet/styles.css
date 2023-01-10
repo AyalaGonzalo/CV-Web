@@ -5,10 +5,22 @@
 	line-height: 24px;
 	font-weight: 400;
 	
-	width:100%;
-	padding:0;
-	margin:0;
+	
 
+	
+}
+
+*,*::before, *::after{
+	
+	box-sizing: border-box;
+	
+}
+
+body{
+	
+	padding: 0;
+	margin: 0;
+	
 	
 }
 	
@@ -16,8 +28,34 @@
 .nav-container, .ul-container, .footer-container{
 	
 	display:flex;
-	justify-content:space-between;
+	justify-content:flex-end;
 	list-style-type:none;
+	
+
+	
+}
+
+
+@media (width <= 600px){
+	
+	
+	
+	.nav-container, .ul-container, .footer-container{
+		
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		
+		
+	}
+	
+	li{
+		
+		
+		margin: 10px;
+	}
+	
+	
 	
 }
 
@@ -26,18 +64,90 @@
 	
 	margin-right: 25px;
 	
+	
+	
 }
+
+
 
 .ul-container > li > a{
-	
+	display: block;
 	text-decoration: none;
 	color:black;
+	border-radius: 20px;
+	text-align:center;
+	border:2px solid black;
+	background-color: rgb(100,200,100);
+	font-size: 20px;
+	padding: 5px;
+	height: 40px;
+	width: 200px;
+	transition: border-radius 0.5s;
 	
 }
 
-header{
+.ul-container > li > a:hover{
+
+
+	border:2px solid black;
+	background-color: rgb(33,200,100);
+	color:white;
 	
+	border-radius:0px;
+	
+}
+
+.ul-container > li > a:active{
+
+
+	
+	background-color: rgb(33,130,33);
+	color:white;
+	border-radius:0px;
+	
+}
+
+
+
+.header-child{
+	
+	display:flex;
+	justify-content: center;
+	
+}
+
+.header-child > h1{
+	
+	line-height: 30px;
+	
+}
+
+.image-logo{
+	
+	width:64px;
+	height:64px;
+	
+}
+
+.welcome-container{
+	
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
 	text-align:center;
+	
+}
+
+.welcome-container > p{
+	
+	width: 450px;
+	
+}
+
+.line{
+	
+	border: 1px solid grey;
+	width:100%;
 	
 }
 
@@ -50,6 +160,26 @@ header{
 	
 }
 
+@media (width <= 600px){
+	
+	.personal-info{
+		
+		display:block;
+		
+	}
+	
+	section{
+		
+		margin: 15px;
+		
+	}
+	
+	
+}
+
+
+
+
 .personal-info > section{
 	
 	margin-left: 10px;
@@ -58,65 +188,191 @@ header{
 	
 }
 
-section > ul {
-	
-	display:none;
-	
-}
+
 
 .info-container > p, h3{
+	
 	
 	margin-left: 15px;
 	
 }
 
-ul > .paragraph{
+
+.displayed{
 	
-	display:flex;
-	align-items:center;
+	display:block;
+	margin-left: 15px;
+	margin-bottom: 20px;
 	
 }
+
+.hidden{
+	
+	
+	display:none;
+	
+}
+
+
 
 .rectangle-bar{
 	
-	background-color: black;
-	width: 1px;
-	height: 20px;
-	margin-left: 20px;
+	background-color: gray;
+	border-radius: 20px;
+	min-width : 0%;
+	max-width : 100%;
+	height: 15px;
+	margin-right: 20px;
+	
+	transition: width cubic-bezier(0.13, 0.77, 0.25, 1);
 }
 
-.rectangle-bar:hover{
+.rectangle-bar > div{
 	
-	width: 200px;
+	height: 15px;
+	border-radius: 20px;
+}
+
+.html{
+	
+	width: 0%;
+	
+	background-color: red;
+	
+	animation: html 1s linear forwards;
+	
+}
+
+.CSS{
+	
+	width: 0%;
+	
+	background-color: red;
+	
+	animation: css 1s linear forwards;
+}
+
+.JavaScript{
+	
+	width: 0%;
+	
+	background-color: red;
+	
+	animation: JavaScript 1s linear forwards;
+}
+
+.Java{
+	
+	width: 0%;
+	
+	background-color: red;
+	
+	animation: Java 1s linear forwards;
 	
 }
 
 
-.skill-h3:hover {
+.NodeJS{
+	
+	width: 0%;
+	
+	background-color: red;
+	
+	animation: NodeJS 1s linear forwards;
+	
+}
+
+
+.skill-button {
   /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
+ 
+  border-radius: 30px;
+  
+  background-color: lightblue;
+  font-size: 1.2em;
   cursor:pointer;
+  margin: 10px;
+  width: 200px;
+  height:40px;
+  transition: border-radius 0.5s;
 
   /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
+ 
 }
 
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+.skill-button:hover{
+	
+	border-radius: 0px;
+	background-color: rgb(33,133,230);
+	color: white;
+	
 }
+
+.skill-button:active{
+	
+	background-color: rgb(33,33,130);
+	color: white;
+	border-radius: 30px;
+	
+}
+
+.rectangle{
+	
+	border-radius: 30px;
+	
+}
+
+
+@keyframes html{
+	
+	100%{
+		
+		width: 35%;
+		
+	}
+}
+
+@keyframes css{
+	
+	100%{
+		
+		width: 25%;
+		
+	}
+}
+
+@keyframes JavaScript{
+	
+	100%{
+		
+		width: 42%;
+		
+	}
+}
+
+@keyframes Java{
+	
+	100%{
+		
+		width: 38%;
+		
+	}
+}
+
+@keyframes NodeJS{
+	
+	100%{
+		
+		width: 3%;
+		
+	}
+}
+
 
 .footer-container{
 	
 	margin-top: 2.5rem;
-	
+	height: 300px;
+	background-color: rgb(230,230,230);
 }
+

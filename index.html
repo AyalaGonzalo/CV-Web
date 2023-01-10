@@ -12,19 +12,12 @@
 
 		<nav class='nav-container'>
 		
-			<div class='nav-child'>
-			
-				<img src='' alt='AG-logo' />
-			
-			</div>
-			
 			
 			
 				<ul class='ul-container'>
 				
-					<li><a class='anchor' href='#about-me'>About me</a></li>
-					<!--<li><a class='anchor' href='#'>Small projects</a></li> -->
-					<li><a class='anchor' href='#'>Social</a></li>
+					<li><a class='anchor' href="#about-me">About me</a></li>
+					<li><a class='anchor' href='#social'>Social</a></li>
 				
 				</ul>
 			
@@ -32,9 +25,18 @@
 		
 		</nav>
 		<header>
-		
-			<h1>AG development</h1>
-			<p>Welcome to my small world</p>
+			<div class='header-child'>
+			
+				<img class='image-logo' src='image/ag.png' alt='AG-logo' />
+				<h1>- Developer</h1>
+			
+			</div>
+			
+			<div class='welcome-container'>
+			
+				<div class='line'></div><p>Welcome to my small world</p><div class='line'></div>
+			
+			</div>
 		
 		</header>
 		<main>
@@ -42,7 +44,7 @@
 			<article class='personal-info'>
 			
 				<section>
-					<h3 class='about-me'>About Me</h3>
+					<a name='about-me'><h3>About Me</h3></a>
 				
 					<div class='info-container'>
 						<p>
@@ -57,17 +59,46 @@
 				</section>
 				<section>
 				
-					<h3 class='skill-h3' data-button>Skills</h3>
+					<button class='skill-button' data-button>Skills</button>
 				
-					<ul class='info-container' data-list>
+					<div class='hidden' data-list>
 						
-						<li class='paragraph'> <p>HTML:</p> <div class='rectangle-bar'></div> </li> 
-						<li class='paragraph'> <p>JavaScript:</p> <div class='rectangle-bar'></div> </li>
-						<li class='paragraph'> <p>CSS:</p> <div class='rectangle-bar'></div> </li>
-						<li class='paragraph'> <p>Java:</p> <div class='rectangle-bar'></div> </li>
-						<li class='paragraph'> <p>NodeJS:</p> <div class='rectangle-bar'> </div></li>
-					
-					</ul>
+						<p>HTML:</p>
+						<div class='rectangle-bar'>
+						
+							<div class='html'></div> 
+						
+						</div>
+						
+						
+						<p>CSS:</p>
+						<div class='rectangle-bar'>
+						
+							<div class='CSS'></div> 
+							
+						</div>
+						
+						<p>JavaScript:</p> 
+						<div class='rectangle-bar'>
+						
+							<div class='JavaScript'></div> </li>
+						
+						</div>
+						
+						<p>Java:</p> 
+						<div class='rectangle-bar'>
+						
+							<div class='Java'></div>
+						 
+						</div>
+						
+						<p>NodeJS:</p> 
+						<div class='rectangle-bar'>
+							
+							<div class='NodeJS'> </div>
+						
+						</div>
+					</div>
 					
 				</section>	
 			
@@ -75,24 +106,22 @@
 			
 	
 		</main>
+		
 		<footer class='footer-container'>
 		
-			<div class='nav-child'>
+			<a name='social'></a>
 			
-				<img src='' alt='AG-logo' />
+				<div>
 			
-			</div>
-			<div>
-			
-				<ul class='ul-container'>
+					<ul class='ul-container'>
 				
-					<li><a href='#'>GitHub</a></li>
-					<li><a href='#'>LinkedIn</a></li>
-					<li><a href='#'>Twitter</a></li>
+						<li><a class='anchor' href='#'>GitHub</a></li>
+						<li><a class='anchor' href='#'>LinkedIn</a></li>
+						<li><a class='anchor' href='#'>Twitter</a></li>
 				
-				</ul>
+					</ul>
 			
-			</div>
+				</div>
 		
 		</footer>
 

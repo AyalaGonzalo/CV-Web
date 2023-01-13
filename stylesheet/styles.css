@@ -1,6 +1,6 @@
 :root{
 	
-	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Inter, Avenir, Helvetica, Arial, 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
@@ -121,6 +121,42 @@ body{
 	line-height: 30px;
 	
 }
+
+main > section{
+	
+	display: flex;
+	justify-content: center;
+	
+	
+}
+
+
+.my-photo-2{
+	
+	width:200px;
+	height:200px;
+	position: absolute;
+	background-color: rgb(133,133,250);
+	border-radius: 100%;
+	transition: opacity 1s ease-in-out;
+	
+}
+
+.my-photo-2:hover{
+	
+	opacity: 0;
+	
+}
+
+.my-photo{
+	
+	width:200px;
+	height:200px;
+	background-color: rgb(133,133,250);
+	border-radius: 100%;
+	
+}
+
 
 .image-logo{
 	
